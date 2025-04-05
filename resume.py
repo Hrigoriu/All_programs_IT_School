@@ -9,7 +9,7 @@ def print_resume(resume_data):
         "Навчання": 15,
         "Робота": 10,
         "Сім'я": 19,
-        "Досягнення": 15,
+        "Досягнення": 25,
         "Хобі": 10,
     }
 
@@ -18,7 +18,7 @@ def print_resume(resume_data):
     for col_name, width in col_widths.items():
         header += f"{col_name:{width}} | "
     print(header.rstrip(" | "))  # Поперечка розділу колонок
-    print("-" * len(header))     # Лінія розділу
+    print("-" * len(header))  # Лінія розділу
 
     # Колонки
     for person in resume_data:
@@ -27,6 +27,7 @@ def print_resume(resume_data):
             value = person.get(col_name, "")  # Значення
             row += f"{value:{width}} | "
         print(row.rstrip(" | "))
+
 
 # Мої дані
 resume_data = [
@@ -37,7 +38,7 @@ resume_data = [
         "Навчання": "IT Step school",
         "Робота": "Програміст",
         "Сім'я": "Одружений, 1 дитина",
-        "Досягнення": "Записався на IT курси програмування))",
+        "Досягнення": "Участь у бойових діях!!!",
         "Хобі": "Кодити))",
     },
 ]
